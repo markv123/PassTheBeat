@@ -7,21 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FFA77BF020A21E6400F02C83 /* TrackTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA77BEF20A21E6400F02C83 /* TrackTimer.swift */; };
+		FFF43E03209F2FA200147976 /* Beat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF43E02209F2FA200147976 /* Beat.swift */; };
+		FFF43E05209F3D5900147976 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF43E04209F3D5900147976 /* Recording.swift */; };
+		FFF43E07209F3D7400147976 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF43E06209F3D7400147976 /* Track.swift */; };
 		FFFE639D209DAD400059FB70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE639C209DAD400059FB70 /* AppDelegate.swift */; };
 		FFFE639F209DAD400059FB70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE639E209DAD400059FB70 /* ViewController.swift */; };
 		FFFE63A2209DAD400059FB70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFFE63A0209DAD400059FB70 /* Main.storyboard */; };
 		FFFE63A4209DAD480059FB70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFFE63A3209DAD480059FB70 /* Assets.xcassets */; };
 		FFFE63A7209DAD480059FB70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFFE63A5209DAD480059FB70 /* LaunchScreen.storyboard */; };
+		FFFE63AF209DDA940059FB70 /* AddBeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE63AE209DDA940059FB70 /* AddBeatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FFA77BEF20A21E6400F02C83 /* TrackTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTimer.swift; sourceTree = "<group>"; };
+		FFF43E02209F2FA200147976 /* Beat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beat.swift; sourceTree = "<group>"; };
+		FFF43E04209F3D5900147976 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		FFF43E06209F3D7400147976 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		FFFE6399209DAD400059FB70 /* PassTheBeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassTheBeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFFE639C209DAD400059FB70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFFE639E209DAD400059FB70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FFFE63A1209DAD400059FB70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FFFE63A3209DAD480059FB70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFFE63A3209DAD480059FB70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../../../../Projects/PassTheBeat/PassTheBeat/Assets.xcassets; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFFE63A6209DAD480059FB70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFFE63A8209DAD480059FB70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFFE63AE209DDA940059FB70 /* AddBeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBeatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +45,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FFF43E01209F2F7400147976 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FFF43E02209F2FA200147976 /* Beat.swift */,
+				FFF43E04209F3D5900147976 /* Recording.swift */,
+				FFF43E06209F3D7400147976 /* Track.swift */,
+				FFA77BEF20A21E6400F02C83 /* TrackTimer.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		FFFE6390209DAD3F0059FB70 = {
 			isa = PBXGroup;
 			children = (
@@ -54,9 +75,11 @@
 		FFFE639B209DAD400059FB70 /* PassTheBeat */ = {
 			isa = PBXGroup;
 			children = (
+				FFF43E01209F2F7400147976 /* Classes */,
 				FFFE639C209DAD400059FB70 /* AppDelegate.swift */,
 				FFFE639E209DAD400059FB70 /* ViewController.swift */,
 				FFFE63A0209DAD400059FB70 /* Main.storyboard */,
+				FFFE63AE209DDA940059FB70 /* AddBeatView.swift */,
 				FFFE63A3209DAD480059FB70 /* Assets.xcassets */,
 				FFFE63A5209DAD480059FB70 /* LaunchScreen.storyboard */,
 				FFFE63A8209DAD480059FB70 /* Info.plist */,
@@ -136,7 +159,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFFE639F209DAD400059FB70 /* ViewController.swift in Sources */,
+				FFF43E03209F2FA200147976 /* Beat.swift in Sources */,
 				FFFE639D209DAD400059FB70 /* AppDelegate.swift in Sources */,
+				FFFE63AF209DDA940059FB70 /* AddBeatView.swift in Sources */,
+				FFF43E05209F3D5900147976 /* Recording.swift in Sources */,
+				FFA77BF020A21E6400F02C83 /* TrackTimer.swift in Sources */,
+				FFF43E07209F3D7400147976 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

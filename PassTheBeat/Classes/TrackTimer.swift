@@ -7,3 +7,6 @@
 //
 
 import Foundation
+//class to keep track of when certain beats are and the
+// time at which they are actually played. -- maybe just
+//the timer section idek

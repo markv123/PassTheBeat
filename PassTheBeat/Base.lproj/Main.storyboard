@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,200 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PassTheBeat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gih-dl-lO9">
+                                <rect key="frame" x="226" y="25" width="86" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="PlusSign"/>
+                                <connections>
+                                    <action selector="goAddBeatView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6th-Sc-waT"/>
+                                    <segue destination="jDC-Ju-ev6" kind="show" identifier="segueAddBeatView" id="6R5-ne-FtS"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonAddBeat" destination="gih-dl-lO9" id="PKF-Vm-z9V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Add Beat View-->
+        <scene sceneID="nJs-EL-ZAY">
+            <objects>
+                <viewController id="jDC-Ju-ev6" customClass="AddBeatView" customModule="PassTheBeat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2pg-A8-apR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OA3-b0-25F">
+                                <rect key="frame" x="28" y="225" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="BlueButton"/>
+                                <connections>
+                                    <action selector="beatButtonPressedWithSender:" destination="jDC-Ju-ev6" eventType="touchUpInside" id="UNu-Uq-lky"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcr-y1-ZNH">
+                                <rect key="frame" x="96" y="225" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="BlueButton"/>
+                                <connections>
+                                    <action selector="beatButtonPressedWithSender:" destination="jDC-Ju-ev6" eventType="touchUpInside" id="6PV-yj-wSQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qze-i3-CSl">
+                                <rect key="frame" x="164" y="225" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="BlueButton"/>
+                                <connections>
+                                    <action selector="beatButtonPressedWithSender:" destination="jDC-Ju-ev6" eventType="touchUpInside" id="7DC-2g-Evf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9h-jN-4o5">
+                                <rect key="frame" x="232" y="225" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="BlueButton"/>
+                                <connections>
+                                    <action selector="beatButtonPressedWithSender:" destination="jDC-Ju-ev6" eventType="touchUpInside" id="DQ9-Zt-A5f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvk-uO-ODV">
+                                <rect key="frame" x="28" y="293" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="GreenButton"/>
+                                <connections>
+                                    <action selector="beatButtonPressedWithSender:" destination="jDC-Ju-ev6" eventType="touchUpInside" id="g4g-RY-MOy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9e-kg-ggC">
+                                <rect key="frame" x="96" y="293" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="GreenButton"/>
+                                <connections>
+                                    <action selector="beatButtonPressedWithSender:" destination="jDC-Ju-ev6" eventType="touchUpInside" id="V1o-Ob-weD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvR-1b-6nO">
+                                <rect key="frame" x="164" y="293" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="GreenButton"/>
+                                <connections>
+                                    <action selector="beatButtonPressedWithSender:" destination="jDC-Ju-ev6" eventType="touchUpInside" id="DHj-rG-HMU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3Y-Qa-V5n">
+                                <rect key="frame" x="232" y="293" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="GreenButton"/>
+                                <connections>
+                                    <action selector="beatButtonPressedWithSender:" destination="jDC-Ju-ev6" eventType="touchUpInside" id="V5k-nH-AHP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhZ-Kh-y3J">
+                                <rect key="frame" x="28" y="361" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="OrangeButton"/>
+                                <connections>
+                                    <action selector="beatButtonPressedWithSender:" destination="jDC-Ju-ev6" eventType="touchUpInside" id="lQx-VQ-5au"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQE-UO-Nuk">
+                                <rect key="frame" x="96" y="361" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="OrangeButton"/>
+                                <connections>
+                                    <action selector="beatButtonPressedWithSender:" destination="jDC-Ju-ev6" eventType="touchUpInside" id="9rL-pX-ICe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbh-VT-vlB">
+                                <rect key="frame" x="164" y="361" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="OrangeButton"/>
+                                <connections>
+                                    <action selector="beatButtonPressedWithSender:" destination="jDC-Ju-ev6" eventType="touchUpInside" id="hT6-WE-rvf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6c-LX-cz9">
+                                <rect key="frame" x="232" y="361" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="OrangeButton"/>
+                                <connections>
+                                    <action selector="beatButtonPressedWithSender:" destination="jDC-Ju-ev6" eventType="touchUpInside" id="TUS-fG-x0m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrq-H8-yih">
+                                <rect key="frame" x="96" y="429" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="RedButton"/>
+                                <connections>
+                                    <action selector="beatButtonPressedWithSender:" destination="jDC-Ju-ev6" eventType="touchUpInside" id="RaQ-XQ-Xxo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnO-v0-gdP">
+                                <rect key="frame" x="164" y="429" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="RedButton"/>
+                                <connections>
+                                    <action selector="beatButtonPressedWithSender:" destination="jDC-Ju-ev6" eventType="touchUpInside" id="RMk-SF-IPE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZZ-Hz-sRd">
+                                <rect key="frame" x="232" y="429" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="RedButton"/>
+                                <connections>
+                                    <action selector="beatButtonPressedWithSender:" destination="jDC-Ju-ev6" eventType="touchUpInside" id="f2j-dV-Gag"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4E4-fZ-ogi">
+                                <rect key="frame" x="28" y="429" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="RedButton"/>
+                                <connections>
+                                    <action selector="beatButtonPressedWithSender:" destination="jDC-Ju-ev6" eventType="touchUpInside" id="UcC-Fp-Y4i"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tnc-Nn-OvD"/>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="OA3-b0-25F" id="1Fi-Yb-hKh"/>
+                        <outlet property="button10" destination="NQE-UO-Nuk" id="gok-Jo-B26"/>
+                        <outlet property="button11" destination="Zbh-VT-vlB" id="vRv-XQ-T3u"/>
+                        <outlet property="button12" destination="S6c-LX-cz9" id="hxA-n0-9QH"/>
+                        <outlet property="button13" destination="4E4-fZ-ogi" id="Vmk-xd-q9H"/>
+                        <outlet property="button14" destination="wrq-H8-yih" id="4lf-4b-eeA"/>
+                        <outlet property="button15" destination="ZnO-v0-gdP" id="oSh-ei-TNp"/>
+                        <outlet property="button16" destination="6ZZ-Hz-sRd" id="jAR-zP-rSJ"/>
+                        <outlet property="button2" destination="Zcr-y1-ZNH" id="SIB-w9-OY7"/>
+                        <outlet property="button3" destination="Qze-i3-CSl" id="TGT-eZ-NKN"/>
+                        <outlet property="button4" destination="z9h-jN-4o5" id="fDb-Hb-dkM"/>
+                        <outlet property="button5" destination="Cvk-uO-ODV" id="tng-yd-HoW"/>
+                        <outlet property="button6" destination="P9e-kg-ggC" id="Yau-25-BaP"/>
+                        <outlet property="button7" destination="bvR-1b-6nO" id="6d6-hP-tSh"/>
+                        <outlet property="button8" destination="N3Y-Qa-V5n" id="iL3-aI-xjm"/>
+                        <outlet property="button9" destination="KhZ-Kh-y3J" id="jSx-BL-EuM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nYI-A6-T7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1343" y="60"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="BlueButton" width="60" height="60"/>
+        <image name="GreenButton" width="60" height="60"/>
+        <image name="OrangeButton" width="60" height="60"/>
+        <image name="PlusSign" width="86" height="60"/>
+        <image name="RedButton" width="60" height="60"/>
+    </resources>
 </document>
