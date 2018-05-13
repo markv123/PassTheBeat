@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF87894F20A884710002A2D3 /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = FF87894E20A884710002A2D3 /* beep.wav */; };
+		FF87895120A884940002A2D3 /* Drum1.wav in Resources */ = {isa = PBXBuildFile; fileRef = FF87895020A884940002A2D3 /* Drum1.wav */; };
+		FF87895320A884A20002A2D3 /* beep_short_on.wav in Resources */ = {isa = PBXBuildFile; fileRef = FF87895220A884A20002A2D3 /* beep_short_on.wav */; };
 		FFA77BF020A21E6400F02C83 /* TrackTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA77BEF20A21E6400F02C83 /* TrackTimer.swift */; };
 		FFF43E03209F2FA200147976 /* Beat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF43E02209F2FA200147976 /* Beat.swift */; };
 		FFF43E05209F3D5900147976 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF43E04209F3D5900147976 /* Recording.swift */; };
@@ -20,9 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF87894E20A884710002A2D3 /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = beep.wav; path = ../../../Application/Application/Sounds/beep.wav; sourceTree = "<group>"; };
+		FF87895020A884940002A2D3 /* Drum1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Drum1.wav; path = PassTheBeat/Assets.xcassets/Sounds/Drum1.dataset/Drum1.wav; sourceTree = SOURCE_ROOT; };
+		FF87895220A884A20002A2D3 /* beep_short_on.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = beep_short_on.wav; path = PassTheBeat/Assets.xcassets/Sounds/beep_short_on.dataset/beep_short_on.wav; sourceTree = SOURCE_ROOT; };
 		FFA77BEF20A21E6400F02C83 /* TrackTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTimer.swift; sourceTree = "<group>"; };
 		FFF43E02209F2FA200147976 /* Beat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beat.swift; sourceTree = "<group>"; };
-		FFF43E04209F3D5900147976 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		FFF43E04209F3D5900147976 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Recording.swift; path = PassTheBeat/Classes/Recording.swift; sourceTree = SOURCE_ROOT; };
 		FFF43E06209F3D7400147976 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		FFFE6399209DAD400059FB70 /* PassTheBeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassTheBeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFFE639C209DAD400059FB70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +54,9 @@
 		FFF43E01209F2F7400147976 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FF87895220A884A20002A2D3 /* beep_short_on.wav */,
+				FF87895020A884940002A2D3 /* Drum1.wav */,
+				FF87894E20A884710002A2D3 /* beep.wav */,
 				FFF43E02209F2FA200147976 /* Beat.swift */,
 				FFF43E04209F3D5900147976 /* Recording.swift */,
 				FFF43E06209F3D7400147976 /* Track.swift */,
@@ -145,8 +154,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF87894F20A884710002A2D3 /* beep.wav in Resources */,
+				FF87895120A884940002A2D3 /* Drum1.wav in Resources */,
 				FFFE63A7209DAD480059FB70 /* LaunchScreen.storyboard in Resources */,
 				FFFE63A4209DAD480059FB70 /* Assets.xcassets in Resources */,
+				FF87895320A884A20002A2D3 /* beep_short_on.wav in Resources */,
 				FFFE63A2209DAD400059FB70 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

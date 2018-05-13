@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PassTheBeat/AddBeatView.swift"
-            timestampString = "547322442.29722"
+            timestampString = "547925606.201165"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "beatButtonPressed(sender:)"
             landmarkType = "7">
          </BreakpointContent>

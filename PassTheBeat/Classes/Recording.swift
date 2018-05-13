@@ -1,12 +1,15 @@
 import Foundation
+import AVFoundation
 
 class Recording {
     var BeatList: [Beat]
+    var AVPlayer: AVAudioPlayer?
     //TODO: add variable for recording timer here
     //TODO: Add a readme.md to github
     
     init(){
         BeatList = [Beat]()
+        AVPlayer = AVAudioPlayer()
     }
     
     func addBeat(p_Beat: Beat){
@@ -14,7 +17,7 @@ class Recording {
     }
     
     func startRecording(){
-        var p_TestString = "This string is nonsense, delete plz."
+        
     }
     
     func stopRecording(){
@@ -22,7 +25,38 @@ class Recording {
     }
     
     func playRecording(){
-        
+        //TODO: Figure out how to access the sounds
+        //      from a different folder
+        //TODO: Add a section of the beat called
+        //      timestamp or something and pause
+        //      for that long before playing the
+        //      sound in the recording so it is
+        //      an actual song.
+        //TODO: Make hitting the record button actually
+        //      be able to add different beats to the beat
+        //      list and the play button play them all.
+        for Beat in BeatList {
+            print("test")
+            DispatchQueue.main.asyncAfter(deadline: .now() + (Beat.timeStamp), execute: {
+                print(Beat.fileName)
+                let path = Bundle.main.path(forResource: Beat.fileName, ofType:nil)
+                if path != nil {
+                    let test = NSURL.fileURL(withPath: path!)
+                    
+                    do {
+                        self.AVPlayer = try AVAudioPlayer(contentsOf: test)
+                        self.AVPlayer?.prepareToPlay()
+                    }
+                    catch let error as NSError {
+                        print (error.debugDescription)
+                    }
+                    
+                } else {
+                    print("audio file is not found")
+                }
+                self.AVPlayer?.play()
+            })
+        }
     }
     
     func stopPlaying(){
