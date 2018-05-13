@@ -58,6 +58,7 @@ class AddBeatView: UIViewController {
             recording?.addBeat(p_Beat: tempBeat!)
             AVList[0].play()
         case button2:
+            print("test")
             AVList[1].play()
         case button3:
             AVList[2].play()
